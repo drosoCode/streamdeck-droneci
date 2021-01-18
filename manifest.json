@@ -1,0 +1,38 @@
+{
+  "Actions": [
+    {
+      "Icon": "Images/icon",
+      "Name": "Drone CI",
+      "States": [
+        {
+          "Image": "Images/pluginAction",
+          "TitleAlignment": "middle",
+          "FontSize": "12"
+        }
+      ],
+      "SupportedInMultiActions": true,
+      "Tooltip": "Drone CI/CD Utility",
+      "UUID": "com.drosocode.droneci",
+      "PropertyInspectorPath": "PropertyInspector/Main.html"
+    }
+  ],
+  "Author": "DrosoCode",
+  "Description": "Drone CI/CD Utility",
+  "Name": "Drone CI",
+  "Icon": "Images/pluginIcon",
+  "URL": "https://github.com/drosoCode/streamdeck-droneci",
+  "Version": "0.1",
+  "CodePath": "com.drosocode.droneci",
+  "Category": "Drone CI",
+  "CategoryIcon": "Images/categoryIcon",
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "4.4.1"
+  }
+}
