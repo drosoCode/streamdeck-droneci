@@ -55,6 +55,7 @@ namespace droneci
         private PluginSettings settings;
         private Timer timer;
         private bool timer_short = false;
+        private int status = 2;
 
 
         #endregion
@@ -100,9 +101,12 @@ namespace droneci
             }
             else if(settings.mode == "promote")
             {
-                updateTimer(true);
-                dynamic list = apiRequest(baseUrl, "GET", settings.token);
-                dynamic resp = apiRequest(baseUrl + list[0].number +"/promote?target="+settings.target, "POST", settings.token);
+                if(this.status == 3)
+                {
+                    updateTimer(true);
+                    dynamic list = apiRequest(baseUrl, "GET", settings.token);
+                    dynamic resp = apiRequest(baseUrl + list[0].number + "/promote?target=" + settings.target, "POST", settings.token);
+                }
                 updateStatus();
             }
         }
@@ -193,6 +197,7 @@ namespace droneci
 
         private void setImage(int status)
         {
+            this.status = status;
             String imgName = "";
 
             switch(status)
